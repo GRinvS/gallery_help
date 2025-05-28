@@ -5,6 +5,7 @@ from config import ROLES, EXCEL_FILES
 import os
 import pandas as pd
 from detect import run
+import loadenv
 
 class Handlers:
     def __init__(self, bot):
@@ -537,7 +538,7 @@ class Handlers:
         else:
             response = generate_chat_response(user_text)
             
-        message.reply_text(response)
+        self.bot.reply_to(message, response)
 
     def guess_painting(description: str) -> str:
         """Определение картины по описанию через Yandex GPT"""
