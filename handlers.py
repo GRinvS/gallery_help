@@ -1,7 +1,7 @@
 from telebot import types
 from database import Database
 from utilss import ImageRecognition, generate_qr_code, get_keyboard_markup
-from config import ROLES, EXCEL_FILES
+from config import ROLES, EXCEL_FILES, IAM_TOKEN, YANDEX_API_URL, FOLDER_ID
 import os
 import pandas as pd
 from detect import run
