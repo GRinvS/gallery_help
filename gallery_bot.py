@@ -38,6 +38,17 @@ def start(message):
 def help_command(message):
     handlers.help_command(message)
 
+@bot.message_handler(commands=['yanGPT'])
+def start_yanGPT(message):
+    """Обработчик команды /yanGPT"""
+   bot.reply_to(message, 
+        "Привет! Ты можешь:\n"
+        "1. Написать описание картины — я угадаю её название и автора. Обязательно используй слово 'описание'\n"
+        "2. Просто поболтать со мной.\n\n"
+        "Попробуй! Например: 'описание: Русский витязь перед камнем с предупреждением'"
+    )
+    self.user_states[user_id]['state'] = 'in_converation'
+
 @bot.message_handler(commands=['request_role'])
 def request_role(message):
     handlers.request_role(message)
