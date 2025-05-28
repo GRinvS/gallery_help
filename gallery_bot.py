@@ -266,6 +266,8 @@ def handle_text(message):
                 handlers.handle_review_text(message)
             elif state == 'waiting_gallery_comment':
                 handlers.handle_gallery_review_text(message)
+            elif state == 'in_conversation':
+                handlers.handle_message(message)
             elif state == 'waiting_artist_name':
                 handlers.handle_artist_name(message)
             elif state == 'waiting_artist_biography':
